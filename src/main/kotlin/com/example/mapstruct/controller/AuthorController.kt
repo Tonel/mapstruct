@@ -1,4 +1,4 @@
-package com.example.mapstruct
+package com.example.mapstruct.controller
 
 import com.example.mapstruct.dto.AuthorDto
 import com.example.mapstruct.dto.SpecialAuthorDto
