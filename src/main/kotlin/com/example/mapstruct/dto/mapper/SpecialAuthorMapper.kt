@@ -30,7 +30,7 @@ abstract class SpecialAuthorMapper {
     fun booksToFirstBook(books : List<Book>) : BookDto {
         return bookToBookDto(
             books
-                .sortedWith(Comparator { e1: Book, e2: Book -> e1.releaseDate.compareTo(e2.releaseDate) })
+                .sortedWith(Comparator { e1: Book, e2: Book -> compareValues(e1.releaseDate, e2.releaseDate) })
                 .first()
         )
     }

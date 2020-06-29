@@ -3,15 +3,19 @@ package com.example.mapstruct.model
 import java.util.*
 
 class Author {
-    val id: Int
+    var id: Int? = null
 
-    val name: String
+    var name: String? = null
 
-    val surname: String
+    var surname: String? = null
 
-    val birthDate: Date
+    var birthDate: Date? = null
 
     val books: MutableList<Book> = ArrayList()
+
+    // the default constructor is required by MapStruct to convert
+    // a DTO object into a model domain object
+    constructor()
 
     constructor(id : Int, name: String, surname: String, birthDate: Date) {
         this.id = id
